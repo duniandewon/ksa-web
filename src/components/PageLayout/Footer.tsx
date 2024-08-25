@@ -8,11 +8,13 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="bg-black">
-      <section className="bg-accent-foreground py-8">
+      <section className="bg-accent-foreground py-16">
         <div className="container text-center space-y-2">
           <h2 className="text-white">Logo</h2>
-          <h2 className="text-white">Keep updated with our fresh blog posts</h2>
           <form className="w-[35rem] mx-auto">
+            <h2 className="text-white mt-8 mb-2">
+              Keep updated with our fresh blog posts
+            </h2>
             <div className="flex gap-4 items-center">
               <Input placeholder="Enter your email" />
               <Button
@@ -27,7 +29,7 @@ export function Footer() {
           </form>
         </div>
       </section>
-      <section className="py-8">
+      <section className="py-16">
         <div className="grid grid-cols-3 gap-16 text-muted-foreground text-sm container">
           <div className="space-y-4">
             <h2 className="text-white text-lg">Logo</h2>

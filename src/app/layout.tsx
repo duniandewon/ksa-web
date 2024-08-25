@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("w-screen overflow-x-hidden", inter.className)}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

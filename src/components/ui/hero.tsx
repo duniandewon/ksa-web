@@ -5,7 +5,7 @@ interface Props {
 
 export function Hero({ backgroundImage, children }: Props) {
   return (
-    <section className="relative w-screen bg-accent-foreground text-white min-h-[70vh] flex items-center justify-center">
+    <section className="relative w-full bg-accent-foreground text-white min-h-[70vh] flex items-center justify-center">
       {backgroundImage ? (
         <div className="absolute top-0 left-0 inset-0 overflow-hidden">
           <div
