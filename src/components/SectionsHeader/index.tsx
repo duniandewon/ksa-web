@@ -20,7 +20,7 @@ interface Props extends VariantProps<typeof sectionsHeaderVariant> {
 export function SectionsHeader({ data, variant }: Props) {
   return (
     <div className={cn(sectionsHeaderVariant({ variant }))}>
-      <h3 className="text-md text-primary">{data.subtitle}</h3>
+      <h3 className="text-md text-primary uppercase">{data.subtitle}</h3>
       <h2 className="text-2xl font-semibold">{data.title}</h2>
     </div>
   );

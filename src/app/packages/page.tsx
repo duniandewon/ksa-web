@@ -1,5 +1,11 @@
-import { Package } from "@/components/Package";
-import { SectionsHeader } from "@/components/SectionsHeader";
+import { Button } from "@/components/ui/button";
+import { Hero } from "@/components/ui/hero";
+
+import { PageLayout } from "@/components/PageLayout";
+
+import { ApplySection } from "../(home)/components/ApplySection";
+import { PackagesSection } from "./components/PackagesSection";
+import { TestimonialsSection } from "./components/TestimonialsSection";
 
 const PAKCAGES = [
   {
@@ -82,23 +88,23 @@ const PAKCAGES = [
   },
 ];
 
-export function OffersSection() {
+export default function Packages() {
   return (
-    <section className="py-16">
-      <div className="container">
-        <SectionsHeader
-          data={{
-            title: "  Haj and Umrah Special Offers",
-            subtitle: "SPECIAL OFFERS",
-          }}
-          variant="centered"
-        />
-        <div className="grid grid-cols-3 gap-16 mt-8">
-          {PAKCAGES.map((data) => (
-            <Package data={data} key={data.id} />
-          ))}
+    <PageLayout>
+      <Hero backgroundImage="/hero.jpg">
+        <div className="text-center">
+          <h2 className="text-6xl font-bold">
+            <span className="block">The Solution for</span>
+            <span className="block">Your Tour and Travels</span>
+          </h2>
+          <Button className="mt-12" size="lg">
+            Apply Now
+          </Button>
         </div>
-      </div>
-    </section>
+      </Hero>
+      <PackagesSection packages={PAKCAGES} />
+      <ApplySection />
+      <TestimonialsSection />
+    </PageLayout>
   );
 }

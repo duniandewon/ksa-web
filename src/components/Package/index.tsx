@@ -1,12 +1,15 @@
-import Link from "next/link";
-import Image from "next/image";
+"use client";
 
-import { buttonVariants } from "../ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { useMemo } from "react";
+
 import { List } from "../ui/list";
 import { Hotel } from "./Hotel";
 
 export interface Package {
   id: number;
+  slug: string;
   name: string;
   image: string;
   hotels: Hotel[];
@@ -21,8 +24,16 @@ interface Props {
 }
 
 export function Package({ data }: Props) {
+  const filledQuota = useMemo(
+    () => (data.numbersBooked / data.quota) * 100,
+    [data.numbersBooked, data.quota]
+  );
+
   return (
-    <div className="border">
+    <Link
+      href={`/${data.slug}`}
+      className="border hover:transform hover:translate-y-[-5px] transition-transform duration-200"
+    >
       <div>
         <Image
           src={data.image}
@@ -48,24 +59,13 @@ export function Package({ data }: Props) {
           </p>
           <p className="text-xl">{data.priceDiscount}/Pax</p>
         </div>
-        <div className="flex gap-2 mt-4">
-          <Link href="#" className={buttonVariants({ variant: "secondary" })}>
-            Apply Now
-          </Link>
-          <Link
-            href="#"
-            className={buttonVariants({
-              variant: "ghost",
-              className: "text-xs",
-            })}
-          >
-            READ MORE
-          </Link>
-        </div>
       </div>
       <div className="border-t p-4 mt-4">
         <div className="w-full h-3 bg-muted-foreground rounded-full relative">
-          <div className="bg-primary w-[85%] h-full rounded-full absolute"></div>
+          <div
+            className="bg-primary h-full rounded-full absolute overflow-hidden"
+            style={{ width: `${filledQuota}%` }}
+          ></div>
         </div>
         <div className="mt-2">
           <p className="text-sm">
@@ -73,6 +73,6 @@ export function Package({ data }: Props) {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
