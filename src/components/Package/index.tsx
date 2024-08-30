@@ -31,7 +31,7 @@ export function Package({ data }: Props) {
 
   return (
     <Link
-      href={`/${data.slug}`}
+      href={`/packages/${data.slug}`}
       className="border hover:transform hover:translate-y-[-5px] transition-transform duration-200"
     >
       <div>

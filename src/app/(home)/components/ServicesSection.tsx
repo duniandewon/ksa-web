@@ -7,7 +7,7 @@ interface Service {
   serviceIcon: string;
 }
 
-const SERVICES: Service[] = [
+export const SERVICES: Service[] = [
   {
     serviceName: "Free Luggage",
     serviceDescription:
@@ -34,7 +34,7 @@ const SERVICES: Service[] = [
   },
 ];
 
-function Service({ service }: { service: Service }) {
+export function Service({ service }: { service: Service }) {
   return (
     <div className="flex gap-4">
       <div className="w-16 h-14 bg-primary" />

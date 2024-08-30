@@ -1,5 +1,6 @@
-import { Building2, Star } from "lucide-react";
-import { StarRating } from "./StarRating";
+import { Building2 } from "lucide-react";
+
+import { StarRating } from "../StarRating";
 
 export interface Hotel {
   id: number;
