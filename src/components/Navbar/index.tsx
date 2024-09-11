@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { List } from "../ui/list";
 
@@ -31,6 +34,8 @@ const MENUS = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+
   return (
     <nav>
       <List
@@ -39,7 +44,8 @@ export function Navbar() {
         render={({ label, path }) => (
           <Link
             href={path}
-            className="inline-block py-4 px-6 hover:text-muted uppercase"
+            data-active={pathname === path ? "true" : null}
+            className="inline-block px-3 py-2 rounded-lg uppercase text-primary hover:bg-muted hover:text-primary-foreground data-[active]:bg-muted data-[active]:text-primary-foreground"
           >
             {label}
           </Link>

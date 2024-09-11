@@ -32,8 +32,14 @@ export function Socials() {
       data={MENUS}
       keyExtractor={(data) => data.id}
       render={(data) => (
-        <Link href={data.path} target="_blank" referrerPolicy="no-referrer">
+        <Link
+          href={data.path}
+          target="_blank"
+          referrerPolicy="no-referrer"
+          className="flex items-center gap-2 capitalize font-semibold"
+        >
           <data.icon size={16} />
+          <p>{data.label}</p>
         </Link>
       )}
     />
