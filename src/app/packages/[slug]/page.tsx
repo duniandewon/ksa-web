@@ -55,7 +55,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   return (
     <PageLayout>
       <Hero backgroundImage="/hero.jpg">
-        <div className="text-center">
+        <div className="text-center py-32 text-white">
           <h2 className="text-6xl font-bold">
             <span className="block">The Solution for</span>
             <span className="block">Your Tour and Travels</span>

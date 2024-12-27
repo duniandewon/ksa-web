@@ -7,7 +7,6 @@ import { List } from "@/components/ui/list";
 
 import { Itenary } from "./ItenaryItem";
 import { PackageOverview } from "./PackageOverview";
-import { Service, SERVICES } from "@/app/(home)/components/ServicesSection";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -61,17 +60,6 @@ export function PackageDetail({ data }: Props) {
           />
 
           <p className="text-muted-foreground">{description}</p>
-        </div>
-
-        <div className="space-y-4">
-          <SectionsHeader
-            data={{ subtitle: "Services", title: "Services Include" }}
-          />
-          <div className="grid grid-cols-2 gap-8 mt-10">
-            {SERVICES.map((service) => (
-              <Service service={service} key={service.serviceName} />
-            ))}
-          </div>
         </div>
 
         <div className="space-y-4">
