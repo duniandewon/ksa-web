@@ -16,16 +16,16 @@ const MENUS = [
     label: "packages",
     path: "/packages",
   },
-  {
-    id: "news",
-    label: "news",
-    path: "/news",
-  },
-  {
-    id: "about-us",
-    label: "about us",
-    path: "/about-us",
-  },
+  // {
+  //   id: "news",
+  //   label: "news",
+  //   path: "/news",
+  // },
+  // {
+  //   id: "about-us",
+  //   label: "about us",
+  //   path: "/about-us",
+  // },
   {
     id: "contact-us",
     label: "contact us",
