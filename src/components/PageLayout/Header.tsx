@@ -23,7 +23,7 @@ const SECONDARY_MENU = [
 
 export function Header() {
   return (
-    <header className="bg-current">
+    <header className="bg-primary">
       <div className="container py-6 flex items-center text-primary-foreground text-sm">
         <ul className="flex items-center gap-4">
           {SECONDARY_MENU.map((menu) => (
@@ -47,7 +47,9 @@ export function Header() {
       </div>
       <div className="bg-white">
         <div className="container py-2 flex items-center">
-          <Image width={269} height={112} src="/logo.png" alt="logo" />
+          <Link href="/">
+            <Image width={250} height={112} src="/logo.png" alt="logo" />
+          </Link>
           <div className="flex-1 flex justify-center">
             <Navbar />
           </div>

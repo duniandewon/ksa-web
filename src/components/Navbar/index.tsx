@@ -45,7 +45,7 @@ export function Navbar() {
           <Link
             href={path}
             data-active={pathname === path ? "true" : null}
-            className="inline-block px-3 py-2 rounded-lg uppercase text-primary hover:bg-muted hover:text-primary-foreground data-[active]:bg-muted data-[active]:text-primary-foreground"
+            className="inline-block px-3 py-2 rounded-lg uppercase text-primary hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent data-[active]:text-accent-foreground"
           >
             {label}
           </Link>

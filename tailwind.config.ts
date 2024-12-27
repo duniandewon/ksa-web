@@ -1,25 +1,25 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: {
-        "DEFAULT": "2rem",
+        DEFAULT: "2rem",
         "2xl": "4rem",
-        "3xl": "8rem"
+        "3xl": "20rem",
       },
       screens: {
         "2xl": "1440px",
-        "3xl": "1920px"
+        "3xl": "1920px",
       },
     },
     extend: {
@@ -58,6 +58,12 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      backgroundImage: {
+        "two-column-gradient":
+          "linear-gradient(90deg, hsl(var(--primary)) 49%, hsl(var(--background)) 47%)",
+        "gradient-achievement":
+          "linear-gradient(90deg,transparent 18%, hsl(var(--muted)) 31%,hsl(var(--primary)) 70%)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -80,6 +86,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

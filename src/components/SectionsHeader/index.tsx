@@ -14,13 +14,20 @@ const sectionsHeaderVariant = cva("space-y-4", {
 });
 
 interface Props extends VariantProps<typeof sectionsHeaderVariant> {
+  className?: string;
   data: { title: string; subtitle: string };
 }
 
-export function SectionsHeader({ data, variant }: Props) {
+export function SectionsHeader({ data, variant, className }: Props) {
   return (
-    <div className={cn(sectionsHeaderVariant({ variant }))}>
-      <h3 className="text-md text-primary uppercase">{data.subtitle}</h3>
+    <div
+      className={cn(
+        sectionsHeaderVariant({ variant }),
+        "text-primary",
+        className
+      )}
+    >
+      <h3 className="text-md uppercase">{data.subtitle}</h3>
       <h2 className="text-2xl font-semibold">{data.title}</h2>
     </div>
   );

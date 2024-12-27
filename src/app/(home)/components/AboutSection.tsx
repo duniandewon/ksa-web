@@ -5,20 +5,7 @@ import { Check } from "lucide-react";
 
 function LeftSide() {
   return (
-    <div className="relative h-[30rem]">
-      <div className="w-full h-full">
-        <div className="bg-sky-600 w-2/3 h-full"></div>
-      </div>
-      <div className="w-full h-full absolute top-9">
-        <div className="bg-sky-800 w-2/3 h-full ml-auto"></div>
-      </div>
-    </div>
-  );
-}
-
-function RightSide() {
-  return (
-    <div className="w-4/5 space-y-4 self-center">
+    <div className="space-y-4 self-center pr-16">
       <SectionsHeader
         data={{
           subtitle: "ABOUT",
@@ -55,12 +42,22 @@ function RightSide() {
   );
 }
 
+function RightSide() {
+  return (
+    <div className="relative h-[50rem]">
+      <div className="w-full h-full"></div>
+    </div>
+  );
+}
+
 export function AboutSection() {
   return (
-    <section className="py-16">
-      <div className="container grid grid-cols-2 gap-16">
-        <LeftSide />
-        <RightSide />
+    <section>
+      <div className="bg-[url('https://demo.afkaristudio.com/qahira/wp-content/uploads/sites/3/2023/12/prophet-mohammed-mosque-al-masjid-an-nabawi-um-2023-11-27-05-14-01-utc.jpg')] bg-cover bg-[center_left] bg-no-repeat">
+        <div className="container grid grid-cols-2 gap-16">
+          <LeftSide />
+          <RightSide />
+        </div>
       </div>
     </section>
   );

@@ -1,84 +1,33 @@
 import { Package } from "@/components/Package";
 import { SectionsHeader } from "@/components/SectionsHeader";
 
-const PAKCAGES = [
+const PAKCAGES: Package[] = [
   {
     id: 2,
     slug: "umrah-package",
     image: "/hero.jpg",
     name: "Umrah Package",
-    numbersBooked: 150,
-    priceDiscount: "16.000 USD",
-    priceOriginal: "15.000 USD",
-    quota: 150,
-    hotels: [
-      {
-        city: "Mecca",
-        description: "200 M To Masjidil Haram",
-        id: 89,
-        roomType: "QUARD ROOM",
-        star: 4,
-      },
-      {
-        city: "Madina",
-        description: "200 M To Nabawi Mosque",
-        id: 89,
-        roomType: "QUAD ROOM",
-        star: 4,
-      },
-    ],
+    price: 1600,
+    days: 9,
+    facilities: [],
   },
   {
     id: 3,
     slug: "umrah-package",
     image: "/hero.jpg",
     name: "Umrah Package",
-    numbersBooked: 150,
-    priceDiscount: "16.000 USD",
-    priceOriginal: "15.000 USD",
-    quota: 150,
-    hotels: [
-      {
-        city: "Mecca",
-        description: "200 M To Masjidil Haram",
-        id: 89,
-        roomType: "QUARD ROOM",
-        star: 4,
-      },
-      {
-        city: "Madina",
-        description: "200 M To Nabawi Mosque",
-        id: 89,
-        roomType: "QUAD ROOM",
-        star: 4,
-      },
-    ],
+    days: 12,
+    price: 1600,
+    facilities: [],
   },
   {
     id: 3,
     slug: "umrah-package",
     image: "/hero.jpg",
     name: "Umrah Package",
-    numbersBooked: 150,
-    priceDiscount: "16.000 USD",
-    priceOriginal: "15.000 USD",
-    quota: 150,
-    hotels: [
-      {
-        city: "Mecca",
-        description: "200 M To Masjidil Haram",
-        id: 89,
-        roomType: "QUARD ROOM",
-        star: 4,
-      },
-      {
-        city: "Madina",
-        description: "200 M To Nabawi Mosque",
-        id: 89,
-        roomType: "QUAD ROOM",
-        star: 4,
-      },
-    ],
+    days: 10,
+    price: 1600,
+    facilities: [],
   },
 ];
 
@@ -88,12 +37,12 @@ export function OffersSection() {
       <div className="container">
         <SectionsHeader
           data={{
-            title: "  Haj and Umrah Special Offers",
+            title: "Haj and Umrah Special Offers",
             subtitle: "SPECIAL OFFERS",
           }}
           variant="centered"
         />
-        <div className="grid grid-cols-3 gap-16 mt-8">
+        <div className="flex gap-8 mt-8">
           {PAKCAGES.map((data) => (
             <Package data={data} key={data.id} />
           ))}
