@@ -1,5 +1,6 @@
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 
 export default function ApplicationForm() {
   return (
@@ -23,6 +24,10 @@ export default function ApplicationForm() {
       <div className="space-y-2 col-span-2">
         <h5 className="font-semibold">Select a package</h5>
         <Input placeholder="Package" />
+      </div>
+      <div className="space-y-2 col-span-2">
+        <h5 className="font-semibold">Add some notes</h5>
+        <Textarea placeholder="Note" />
       </div>
       <div className="col-span-2">
         <Button size="lg">Apply Now</Button>
