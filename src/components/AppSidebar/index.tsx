@@ -11,7 +11,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "../ui/sidebar";
-import { buttonVariants } from "../ui/button";
 
 const MENUS = [
   {
