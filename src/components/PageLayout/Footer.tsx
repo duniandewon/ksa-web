@@ -9,11 +9,11 @@ import Image from "next/image";
 function SubscribeForm() {
   return (
     <div className="container relative z-10">
-      <div className="grid grid-cols-[1fr_2fr] gap-60 items-center justify-between py-10 px-12 bg-muted rounded-3xl">
-        <h2 className="text-2xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4 lg:gap-60 items-center justify-between p-8 lg:py-10 lg:px-12 bg-muted rounded-3xl">
+        <h2 className="text-xl lg:text-2xl">
           Don&#39;t Miss Our Latest News About Umrah and Hajj
         </h2>
-        <form className="flex flex-1 gap-6">
+        <form className="flex gap-6">
           <Input placeholder="Email" />
           <Button>Subscribe</Button>
         </form>
@@ -25,8 +25,8 @@ function SubscribeForm() {
 function FooterContent() {
   return (
     <section className="pt-32 pb-16 bg-primary text-primary-foreground -mt-10">
-      <div className="grid grid-cols-3 gap-16 text-sm container">
-        <div className="space-y-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 text-sm container">
+        <div className="space-y-4 lg:col-span-1 md:col-span-2">
           <Image width={250} height={112} src="/logo.png" alt="logo" />
           <p>
             Vivamus viverra, ligula non tincidunt pulvinar, augue est sagittis
@@ -118,7 +118,7 @@ function FooterContent() {
 
 export function Footer() {
   return (
-    <footer className="flex flex-col">
+    <footer className="lg:flex flex-col">
       <SubscribeForm />
       <FooterContent />
     </footer>

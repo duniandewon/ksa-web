@@ -42,7 +42,7 @@ export function OffersSection() {
           }}
           variant="centered"
         />
-        <div className="flex gap-8 mt-8">
+        <div className="lg:flex gap-8 mt-8">
           {PAKCAGES.map((data) => (
             <Package data={data} key={data.id} />
           ))}

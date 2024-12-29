@@ -28,7 +28,7 @@ export default function Contact() {
           </h2>
         </div>
       </Hero>
-      <section className="container grid grid-cols-[1fr_2fr] gap-16 py-16 items-center">
+      <section className="container grid lg:grid-cols-[1fr_2fr] gap-16 py-16 items-center">
         <div className="space-y-8">
           <SectionsHeader
             data={{

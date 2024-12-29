@@ -44,7 +44,7 @@ function LeftSide() {
 
 function RightSide() {
   return (
-    <div className="relative h-[50rem]">
+    <div className="relative lg:h-[50rem] max-lg:hidden">
       <div className="w-full h-full"></div>
     </div>
   );
@@ -53,8 +53,8 @@ function RightSide() {
 export function AboutSection() {
   return (
     <section>
-      <div className="bg-[url('https://demo.afkaristudio.com/qahira/wp-content/uploads/sites/3/2023/12/prophet-mohammed-mosque-al-masjid-an-nabawi-um-2023-11-27-05-14-01-utc.jpg')] bg-cover bg-[center_left] bg-no-repeat">
-        <div className="container grid grid-cols-2 gap-16">
+      <div className="lg:bg-[url('https://demo.afkaristudio.com/qahira/wp-content/uploads/sites/3/2023/12/prophet-mohammed-mosque-al-masjid-an-nabawi-um-2023-11-27-05-14-01-utc.jpg')] bg-cover bg-[center_left] bg-no-repeat">
+        <div className="container grid lg:grid-cols-2 gap-16 py-16">
           <LeftSide />
           <RightSide />
         </div>

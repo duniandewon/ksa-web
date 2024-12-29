@@ -10,10 +10,9 @@ function LeftSide() {
         className="text-white"
         data={{
           subtitle: "Your Path to Umrah Serenity",
-          title: "",
+          title: "Your Ultimate Umrah Experience Awaits",
         }}
       />
-      <h2 className="text-7xl">Your Ultimate Umrah Experience Awaits</h2>
     </div>
   );
 }
@@ -39,7 +38,7 @@ export function ApplySection() {
         bgUrl="https://demo.afkaristudio.com/qahira/wp-content/uploads/sites/3/2023/12/pilgrims-in-kaaba-in-macca-al-haram-umrah-social-2023-11-27-04-59-17-utc.jpg"
         className="-mt-[75px] pt-36 pb-10"
       >
-        <div className="container flex items-center">
+        <div className="container lg:flex items-center space-y-16">
           <LeftSide />
           <Form />
         </div>

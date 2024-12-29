@@ -51,7 +51,7 @@ function Steps({ steps }: { steps: Step[] }) {
 
 export default function HowItWorksSection() {
   return (
-    <section className="grid grid-cols-2 gap-28 container py-16">
+    <section className="grid lg:grid-cols-2 gap-28 container py-16">
       <div className="space-y-8">
         <SectionsHeader
           data={{
@@ -61,7 +61,7 @@ export default function HowItWorksSection() {
         />
         <div className="relative">
           <div className="w-full rounded-3xl bg-slate-600 h-[31.625rem]"></div>
-          <div className="bg-muted flex items-center rounded-3xl w-7/12 px-5 py-9 absolute -bottom-8 -right-10">
+          <div className="bg-muted flex items-center rounded-3xl w-full lg:w-7/12 px-5 py-9 absolute -bottom-1 lg:-bottom-8 right-0 lg:-right-10">
             <div className="w-[93.33px] h-full"></div>
             <h3 className="font-bold text-2xl">
               Flying & Send 1000+ Pilgrims to Mecca

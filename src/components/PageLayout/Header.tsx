@@ -2,9 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Phone } from "lucide-react";
+import { Menu } from 'lucide-react';
 
 import { Socials } from "../Socials";
 import { Navbar } from "../Navbar";
+import { Button } from "../ui/button";
+
 
 const SECONDARY_MENU = [
   {
@@ -24,11 +27,11 @@ const SECONDARY_MENU = [
 export function Header() {
   return (
     <header className="bg-primary">
-      <div className="container py-6 flex items-center text-primary-foreground text-sm">
-        <ul className="flex items-center gap-4">
+      <div className="container py-6 grid lg:grid-cols-3 justify-items-center items-center  text-primary-foreground text-sm">
+        <ul className="hidden md:flex items-center">
           {SECONDARY_MENU.map((menu) => (
             <li
-              className="border-l pl-4 first:pl-0 first:border-none"
+              className="border-l pr-3 pl-3 first:pl-0 last:pr-0 first:border-none"
               key={menu.path}
             >
               <Link
@@ -40,20 +43,22 @@ export function Header() {
             </li>
           ))}
         </ul>
-        <div className="flex-1 text-center">
+        <div className="hidden md:block">
           <p> nomor izin usaha</p>
         </div>
-        <Socials />
+        <div className="lg:justify-self-end">
+          <Socials />
+        </div>
       </div>
       <div className="bg-white">
         <div className="container py-2 flex items-center">
           <Link href="/">
             <Image width={250} height={112} src="/logo.png" alt="logo" />
           </Link>
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 hidden lg:flex justify-center">
             <Navbar />
           </div>
-          <div className="grid grid-cols-[auto_1fr] gap-x-2">
+          <div className="hidden lg:grid grid-cols-[auto_1fr] gap-x-2">
             <div className="bg-muted/40 w-[3rem] h-[3rem] rounded-full flex items-center justify-center row-span-2">
               <Phone size={25} fill="currentColor" />
             </div>
