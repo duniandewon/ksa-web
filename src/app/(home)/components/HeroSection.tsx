@@ -9,7 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export function HeroSection() {
   return (
     <>
-      <Hero backgroundImage="/hero.jpg">
+      <Hero backgroundImage="https://res.cloudinary.com/ndewon/image/upload/v1735484007/KSA/pexels-sohail-siddiqui-380091509-20472958_wcfxkm.jpg">
         <div className="py-16 lg:pb-0 space-y-16 xl:space-y-32 xl:pt-32">
           <div className="text-center space-y-6 w-full lg:w-[60%] mx-auto text-white">
             <h2 className="text-4xl lg:text-5xl">
@@ -61,7 +61,7 @@ export function HeroSection() {
           </div>
           <div className="lg:bg-two-column-gradient">
             <div className="grid lg:grid-cols-3 container">
-              <div className="bg-primary text-primary-foreground border-b lg:border-b-0 lg:border-r border-muted space-y-4 py-8 pr-8 pl-8 lg:py16 lg:pr-16 lg:pl-0">
+              <div className="bg-primary text-primary-foreground border-b lg:border-b-0 lg:border-r border-muted space-y-4 py-8 pr-8 pl-8 lg:py-16 lg:pr-16 lg:pl-0">
                 <h2 className="text-2xl font-semibold">Easy Booking Service</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut

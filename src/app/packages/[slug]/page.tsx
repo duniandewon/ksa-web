@@ -54,7 +54,7 @@ const samplePackage: PackageDetail = {
 export default function Page({ params }: { params: { slug: string } }) {
   return (
     <PageLayout>
-      <Hero backgroundImage="/hero.jpg">
+      <Hero backgroundImage="https://res.cloudinary.com/ndewon/image/upload/v1735484007/KSA/pexels-sohail-siddiqui-380091509-20472958_wcfxkm.jpg">
         <div className="text-center py-32 text-white">
           <h2 className="text-6xl font-bold">
             <span className="block">The Solution for</span>

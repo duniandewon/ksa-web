@@ -32,7 +32,7 @@ export function Package({ data }: Props) {
           className="rounded-2xl"
         />
       </div>
-      <div className="w-11/12 bg-muted rounded-2xl -mt-44 p-10 relative">
+      <div className="w-full lg:w-11/12 bg-muted rounded-2xl -mt-44 p-10 relative">
         <h2 className="text-2xl font-semibold">{data.name}</h2>
         <div className="bg-primary max-w-max text-white p-4 absolute -top-6 right-10 border-4 border-[#f0efe4]">
           <h2 className="text-right font-bold text-sm">Days</h2>

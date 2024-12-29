@@ -35,7 +35,7 @@ export function ApplySection() {
     <section className="flex flex-col">
       <Achievement />
       <Parallax
-        bgUrl="https://demo.afkaristudio.com/qahira/wp-content/uploads/sites/3/2023/12/pilgrims-in-kaaba-in-macca-al-haram-umrah-social-2023-11-27-04-59-17-utc.jpg"
+        bgUrl="https://res.cloudinary.com/ndewon/image/upload/v1735484017/KSA/pexels-yasirgurbuz-11259831_btuygq.jpg"
         className="-mt-[75px] pt-36 pb-10"
       >
         <div className="container lg:flex items-center space-y-16">

@@ -34,7 +34,7 @@ const PAKCAGES: Package[] = [
 export function OffersSection() {
   return (
     <section className="py-16">
-      <div className="container">
+      <div className="container space-y-8">
         <SectionsHeader
           data={{
             title: "Haj and Umrah Special Offers",
@@ -42,9 +42,11 @@ export function OffersSection() {
           }}
           variant="centered"
         />
-        <div className="lg:flex gap-8 mt-8">
+        <div className="flex flex-wrap gap-8">
           {PAKCAGES.map((data) => (
-            <Package data={data} key={data.id} />
+            <div key={data.id} className="w-full lg:max-w-[24.375rem]">
+              <Package data={data} />
+            </div>
           ))}
         </div>
       </div>

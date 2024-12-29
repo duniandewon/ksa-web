@@ -4,7 +4,7 @@ import { Textarea } from "../ui/textarea";
 
 export default function ApplicationForm() {
   return (
-    <form className="grid grid-cols-1 xl-lg:grid-cols-2 items-center gap-6">
+    <form className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
       <div className="space-y-2">
         <h5 className="font-semibold">Your name</h5>
         <Input placeholder="Name" />

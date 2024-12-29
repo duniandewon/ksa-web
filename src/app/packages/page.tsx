@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Hero } from "@/components/ui/hero";
 
 import { PageLayout } from "@/components/PageLayout";
@@ -40,14 +39,11 @@ const PAKCAGES: Package[] = [
 export default function Packages() {
   return (
     <PageLayout>
-      <Hero backgroundImage="/hero.jpg">
+      <Hero backgroundImage="https://res.cloudinary.com/ndewon/image/upload/v1735484007/KSA/pexels-sohail-siddiqui-380091509-20472958_wcfxkm.jpg">
         <div className="text-center py-32 text-white">
           <h2 className="text-6xl font-bold">
             Explore all Our Packages
           </h2>
-          <Button className="mt-12" size="lg">
-            Apply Now
-          </Button>
         </div>
       </Hero>
       <PackagesSection packages={PAKCAGES} />
